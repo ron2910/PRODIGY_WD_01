@@ -1,0 +1,74 @@
+/* CSS Variables for easy customization */
+:root {
+    --navbar-bg: #333;
+    --navbar-bg-scrolled: #222;
+    --navbar-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --navbar-shadow-scrolled: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --menu-link-color: white;
+    --menu-link-hover-bg: white;
+    --menu-link-hover-color: #333;
+}
+
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    color: var(--menu-link-color);
+    padding: 10px 20px;
+    box-shadow: var(--navbar-shadow);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: var(--navbar-bg-scrolled);
+    box-shadow: var(--navbar-shadow-scrolled);
+}
+
+/* Menu styling */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    color: var(--menu-link-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: var(--menu-link-hover-bg);
+    color: var(--menu-link-hover-color);
+    border-radius: 5px;
+}
+
+/* Section styling */
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+#home { background-color: #f4f4f4; }
+#about { background-color: #ddd; }
+#services { background-color: #bbb; }
+#contact { background-color: #999; }
